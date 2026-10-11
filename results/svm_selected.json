@@ -1,0 +1,16 @@
+{
+  "linear": {
+    "kernel": "linear",
+    "C": 0.1,
+    "gamma": null,
+    "validation_accuracy": 0.7258333333333333,
+    "support_vectors": 5849
+  },
+  "rbf": {
+    "kernel": "rbf",
+    "C": 100,
+    "gamma": 1,
+    "validation_accuracy": 0.9966666666666667,
+    "support_vectors": 266
+  }
+}

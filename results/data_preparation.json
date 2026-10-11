@@ -1,0 +1,58 @@
+{
+  "raw_rows": 12001,
+  "raw_columns": 9,
+  "raw_column_names": [
+    "Output (S)",
+    "Ia",
+    "Ib",
+    "Ic",
+    "Va",
+    "Vb",
+    "Vc",
+    "Unnamed: 7",
+    "Unnamed: 8"
+  ],
+  "removed_columns": [
+    "Unnamed: 7",
+    "Unnamed: 8"
+  ],
+  "missing_after_cleaning": {
+    "fault": 0,
+    "Ia": 0,
+    "Ib": 0,
+    "Ic": 0,
+    "Va": 0,
+    "Vb": 0,
+    "Vc": 0
+  },
+  "numeric_features": [
+    "Ia",
+    "Ib",
+    "Ic",
+    "Va",
+    "Vb",
+    "Vc"
+  ],
+  "fault_rows": 5496,
+  "no_fault_rows": 6505,
+  "splits": {
+    "train": {
+      "rows": 7200,
+      "faults": 3317,
+      "fault_fraction": 0.46069444444444446
+    },
+    "val": {
+      "rows": 2400,
+      "faults": 1083,
+      "fault_fraction": 0.45125
+    },
+    "test": {
+      "rows": 2401,
+      "faults": 1096,
+      "fault_fraction": 0.4564764681382757
+    }
+  },
+  "seed": 42,
+  "std_ddof": 0,
+  "dataset_sha256": "7d3cf7964a969069198880d9e265e2caaff7f2037bd3acdf6b167059cb2e2700"
+}

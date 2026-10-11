@@ -1,0 +1,15 @@
+{
+  "core_tests_passed": 7,
+  "validation_parity_rows": 64,
+  "max_probability_error": 8.881784197001252e-16,
+  "max_rbf_margin_error": 6.687983500341943e-13,
+  "initial_status": "● Fault detected",
+  "normal_example": "● No fault detected",
+  "fault_example": "● Fault detected",
+  "manual_input_works": true,
+  "stale_results_reset": true,
+  "desktop_horizontal_overflow": false,
+  "mobile_horizontal_overflow": false,
+  "console_errors": [],
+  "rounded_training_examples_verified": true
+}

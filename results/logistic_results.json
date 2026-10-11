@@ -1,0 +1,18 @@
+{
+  "R": {
+    "feature_set": "R",
+    "chosen_alpha": 1.0,
+    "final_cost": 0.6771611730538888,
+    "training_accuracy": 0.7258333333333333,
+    "validation_accuracy": 0.7308333333333333,
+    "iterations": 2000
+  },
+  "Q": {
+    "feature_set": "Q",
+    "chosen_alpha": 10.0,
+    "final_cost": 0.05343427118405188,
+    "training_accuracy": 0.97875,
+    "validation_accuracy": 0.9783333333333334,
+    "iterations": 2000
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "evaluation_count": 1,
+  "test_rows": 2401,
+  "fingerprints": {
+    "prepared.npz": "1bae345aa45e8d26c775a1ee6e2c067119645c3e23f95ebd5aea06c9eb9cb50d",
+    "logistic_R.joblib": "f2c4d8a71388995a504b5f7ab4abda0114b7690ede5396ffd4eec366a33d3e83",
+    "logistic_Q.joblib": "8748977340f57636fb40b65c8886fa259c199e16da875dbb8c533014f75cddd4",
+    "svm_linear.joblib": "c9008cd45972ee5127b5658b6459c9678b2c7dde1994e5537c4eb861afeb3e14",
+    "svm_rbf.joblib": "3661f0b54f17ae4999e0868b9ef4b661bd71da8af9ef2a194b89c36e877acb7e"
+  },
+  "models": [
+    {
+      "model": "Logistic regression, Set R",
+      "accuracy": 0.7263640149937526,
+      "TN": 1305,
+      "false_alarms": 0,
+      "missed_faults": 657,
+      "TP": 439,
+      "confusion_matrix": [
+        [
+          1305,
+          0
+        ],
+        [
+          657,
+          439
+        ]
+      ]
+    },
+    {
+      "model": "Logistic regression, Set Q",
+      "accuracy": 0.978758850478967,
+      "TN": 1299,
+      "false_alarms": 6,
+      "missed_faults": 45,
+      "TP": 1051,
+      "confusion_matrix": [
+        [
+          1299,
+          6
+        ],
+        [
+          45,
+          1051
+        ]
+      ]
+    },
+    {
+      "model": "Linear SVM (C=0.1)",
+      "accuracy": 0.7359433569346105,
+      "TN": 1305,
+      "false_alarms": 0,
+      "missed_faults": 634,
+      "TP": 462,
+      "confusion_matrix": [
+        [
+          1305,
+          0
+        ],
+        [
+          634,
+          462
+        ]
+      ]
+    },
+    {
+      "model": "RBF SVM (C=100, gamma=1)",
+      "accuracy": 0.9958350687213661,
+      "TN": 1301,
+      "false_alarms": 4,
+      "missed_faults": 6,
+      "TP": 1090,
+      "confusion_matrix": [
+        [
+          1301,
+          4
+        ],
+        [
+          6,
+          1090
+        ]
+      ]
+    }
+  ]
+}
