@@ -1,5 +1,7 @@
 # PhaseGuard - Three-phase transmission-line fault detection
 
+**[Open the deployed website →](https://laibasan.github.io/assignment-2/)**
+
 AI4003 Applied Machine Learning, Assignment 02, Fall 2026. A reproducible experiment on whether nonlinear features or a kernel are needed to classify instantaneous three-phase measurements.
 
 ![PhaseGuard prediction interface](results/figures/frontend_desktop.png)
