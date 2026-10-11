@@ -219,9 +219,11 @@ Core tests verify the gradient numerically, sigmoid extremes, log(2) initial los
 
 The experiment uses only NumPy, pandas, matplotlib, joblib, the Python standard library, and `sklearn.svm.SVC` for ML. Browser automation is a development-time UI verification tool; it does not split, scale, train, or score the experiment.
 
-## Optional GitHub Pages hosting
+## Live website
 
-The frontend is static, including the trained RBF support-vector expansion, so GitHub Pages can host it without a Python backend. In repository **Settings → Pages**, select **GitHub Actions** as the source. Then run the **Deploy PhaseGuard interface** workflow or push an app change. Until a deployment succeeds, use the local run command above. The workflow publishes only `app/`.
+**Live website:** [PhaseGuard](https://laibasan.github.io/assignment-2/)
+
+The frontend runs both trained models directly in your browser without a Python backend. GitHub Pages publishes `app/` through the **Deploy PhaseGuard interface** workflow. Changes to `app/` on `main` deploy automatically. Deployment succeeded on 11 October 2026; fault and normal examples, manual input, and Clear/reset were verified on the live website.
 
 ## Communication and human submission steps
 
@@ -252,7 +254,7 @@ These are consecutive simulated samples, randomly split as required. Near-neighb
 | Public repository | {REPO_URL} |
 | Exactly two members; meaningful commits by both | Actual member identities/contributions still required |
 | Repo/blog/post links submitted to instructor | Your submission portal action still required |
-| Optional live website | Pages workflow supplied; GitHub Pages settings must be enabled |
+| Live website | https://laibasan.github.io/assignment-2/ — deployed and verified |
 
 Do not fabricate publication URLs, commit authors, teamwork, or unaided authorship. The original manual prohibits direct AI-generated submission. Use this material to understand and independently revise the experiment before the viva.
 """)
