@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PhaseGuard - Three-phase fault detection</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="models.js"></script><script defer src="examples.js"></script>
+  <script defer src="inference.js"></script><script defer src="ui.js"></script>
+</head>
+<body>
+<div class="shell">
+  <header><a class="brand" href="./"><span class="brand-icon">ϟ</span> PhaseGuard <span class="brand-small">ML LAB</span></a><a class="repo" href="https://github.com/laibasan/assignment-2" target="_blank" rel="noopener">View experiment ↗</a></header>
+  <main>
+    <div class="eyebrow"><span></span> THREE-PHASE TRANSMISSION LINE</div>
+    <h1>One instant.<br><span>Two perspectives.</span></h1>
+    <p class="intro">Enter a snapshot of your line currents and voltages. Compare a magnitude-aware logistic model with a kernel SVM.</p>
+    <div class="workspace">
+      <section class="input-card" aria-labelledby="input-title">
+        <div class="section-top"><div><p class="kicker">01 / MEASUREMENTS</p><h2 id="input-title">Line snapshot</h2></div><span class="tag">6 features</span></div>
+        <form id="prediction-form">
+          <div class="group-heading">Phase currents <span>AMPERES</span></div>
+          <div class="input-grid">
+            <label><span><i class="phase a"></i> I<sub>a</sub></span><input name="Ia" type="number" step="any" required value="0"><small>A</small></label>
+            <label><span><i class="phase b"></i> I<sub>b</sub></span><input name="Ib" type="number" step="any" required value="0"><small>A</small></label>
+            <label><span><i class="phase c"></i> I<sub>c</sub></span><input name="Ic" type="number" step="any" required value="0"><small>A</small></label>
+          </div>
+          <div class="group-heading">Phase voltages <span>PER UNIT</span></div>
+          <div class="input-grid">
+            <label><span><i class="phase a"></i> V<sub>a</sub></span><input name="Va" type="number" step="any" required value="0"><small>p.u.</small></label>
+            <label><span><i class="phase b"></i> V<sub>b</sub></span><input name="Vb" type="number" step="any" required value="0"><small>p.u.</small></label>
+            <label><span><i class="phase c"></i> V<sub>c</sub></span><input name="Vc" type="number" step="any" required value="0"><small>p.u.</small></label>
+          </div>
+          <button class="predict-button" type="submit">Analyse snapshot <span>→</span></button>
+          <p class="error" id="error" role="alert"></p>
+        </form>
+        <div class="examples"><span>Try a training sample</span><div><button id="example-normal" type="button">No fault</button><button id="example-fault" type="button">Fault</button></div></div>
+        <p class="sample-note" id="sample-note"></p>
+      </section>
+      <section class="output-column" aria-labelledby="output-title">
+        <div class="output-heading"><p class="kicker" id="output-title">02 / MODEL PREDICTIONS</p><span id="agreement" class="agreement">Ready</span></div>
+        <div class="model-grid" aria-live="polite">
+          <article class="model-card" id="logistic-card"><div class="model-mark">Q</div><p class="model-kind">12 FEATURES · NUMPY</p><h2>Logistic regression</h2><p class="model-desc">Raw measurements + squared magnitudes</p><div class="status" id="logistic-status">Awaiting snapshot</div><div class="score"><span>Fault probability</span><strong id="probability">—</strong></div><div class="probability-bar"><div id="probability-fill"></div><span></span></div><p class="detail">Decision threshold: 0.50</p><div class="test-stat"><span>Held-out accuracy</span><strong id="logistic-accuracy">—</strong></div></article>
+          <article class="model-card" id="svm-card"><div class="model-mark blue">K</div><p class="model-kind">6 FEATURES · RBF KERNEL</p><h2>Support vector machine</h2><p class="model-desc" id="svm-setting">Nonlinear similarity in feature space</p><div class="status" id="svm-status">Awaiting snapshot</div><div class="score"><span>Decision margin</span><strong id="margin">—</strong></div><div class="margin-labels"><span>− No fault</span><span>Fault +</span></div><p class="detail">A signed score, not a probability</p><div class="test-stat"><span>Held-out accuracy</span><strong id="svm-accuracy">—</strong></div></article>
+        </div>
+        <div class="explanation"><span>↗</span><div><strong>Why the squares?</strong><p>A fault can drive current in either direction. Squared measurements capture magnitude, allowing a curved boundary without a more complex classifier.</p></div></div>
+      </section>
+    </div>
+    <section class="results-strip"><div><span class="kicker">THE EXPERIMENT</span><h2>Same data. Different boundaries.</h2><p>Fixed random split · train-only scaling · one final test</p></div><div class="stat"><strong>12,001</strong><span>consecutive samples</span></div><div class="stat"><strong>60 / 20 / 20</strong><span>train / validation / test</span></div><div class="stat"><strong id="support-count">—</strong><span>RBF support vectors</span></div></section>
+    <p class="caution">Educational simulation. Consecutive samples were randomly split; these scores do not establish performance on unseen fault events or suitability for a protective relay.</p>
+  </main>
+  <footer><span>AI4003 / Applied Machine Learning / Assignment 02</span><span>Saved models. Local inference.</span></footer>
+</div>
+</body>
+</html>

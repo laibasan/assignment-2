@@ -1,0 +1,1 @@
+window.FAULT_EXAMPLES = [{"label": "No-fault example", "actual_class": 0, "values": [-55.51330095, 9.174614469, 48.63536624, 0.260790677, -0.595313939, 0.334523262]}, {"label": "Fault example", "actual_class": 1, "values": [-785.1141699, 43.65168035, 743.5575144, -0.034649556, 0.03846274, -0.003813185]}];
