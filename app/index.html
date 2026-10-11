@@ -20,15 +20,15 @@
         <form id="prediction-form">
           <div class="group-heading">Phase currents <span>AMPERES</span></div>
           <div class="input-grid">
-            <label><span><i class="phase a"></i> I<sub>a</sub></span><input name="Ia" type="number" step="any" required value="0"><small>A</small></label>
-            <label><span><i class="phase b"></i> I<sub>b</sub></span><input name="Ib" type="number" step="any" required value="0"><small>A</small></label>
-            <label><span><i class="phase c"></i> I<sub>c</sub></span><input name="Ic" type="number" step="any" required value="0"><small>A</small></label>
+            <label><span><i class="phase a"></i> I<sub>a</sub></span><input name="Ia" aria-label="Phase A current in amperes" type="number" step="any" required value="0"><small>A</small></label>
+            <label><span><i class="phase b"></i> I<sub>b</sub></span><input name="Ib" aria-label="Phase B current in amperes" type="number" step="any" required value="0"><small>A</small></label>
+            <label><span><i class="phase c"></i> I<sub>c</sub></span><input name="Ic" aria-label="Phase C current in amperes" type="number" step="any" required value="0"><small>A</small></label>
           </div>
           <div class="group-heading">Phase voltages <span>PER UNIT</span></div>
           <div class="input-grid">
-            <label><span><i class="phase a"></i> V<sub>a</sub></span><input name="Va" type="number" step="any" required value="0"><small>p.u.</small></label>
-            <label><span><i class="phase b"></i> V<sub>b</sub></span><input name="Vb" type="number" step="any" required value="0"><small>p.u.</small></label>
-            <label><span><i class="phase c"></i> V<sub>c</sub></span><input name="Vc" type="number" step="any" required value="0"><small>p.u.</small></label>
+            <label><span><i class="phase a"></i> V<sub>a</sub></span><input name="Va" aria-label="Phase A voltage in per unit" type="number" step="any" required value="0"><small>p.u.</small></label>
+            <label><span><i class="phase b"></i> V<sub>b</sub></span><input name="Vb" aria-label="Phase B voltage in per unit" type="number" step="any" required value="0"><small>p.u.</small></label>
+            <label><span><i class="phase c"></i> V<sub>c</sub></span><input name="Vc" aria-label="Phase C voltage in per unit" type="number" step="any" required value="0"><small>p.u.</small></label>
           </div>
           <button class="predict-button" type="submit">Analyse snapshot <span>→</span></button>
           <p class="error" id="error" role="alert"></p>
@@ -52,3 +52,4 @@
 </div>
 </body>
 </html>
+
