@@ -37,8 +37,24 @@ function example(index) {
 }
 el('example-normal').addEventListener('click', () => example(0));
 el('example-fault').addEventListener('click', () => example(1));
+// Clear both measurements and stale predictions before entering a new snapshot.
+const clearButton = document.createElement('button');
+clearButton.id = 'clear-snapshot';
+clearButton.type = 'button';
+clearButton.textContent = 'Clear';
+clearButton.setAttribute('aria-label', 'Clear all measurements and predictions');
+el('example-fault').parentElement.appendChild(clearButton);
+clearButton.addEventListener('click', () => {
+  inputs.forEach(input => { input.value = ''; });
+  resetResults();
+  ['logistic', 'svm'].forEach(id => { el(id + '-status').textContent = 'Awaiting snapshot'; });
+  el('agreement').textContent = 'Ready';
+  el('error').textContent = '';
+  inputs[0].focus();
+});
 el('logistic-accuracy').textContent = (100 * models.test_results[1].accuracy).toFixed(2) + '%';
 el('svm-accuracy').textContent = (100 * models.test_results[3].accuracy).toFixed(2) + '%';
 el('support-count').textContent = models.rbf.support_vectors.length.toLocaleString();
 el('svm-setting').textContent = 'C = ' + models.rbf.C + ' · gamma = ' + models.rbf.gamma;
 example(1);
+
