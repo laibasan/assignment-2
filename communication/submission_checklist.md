@@ -12,6 +12,6 @@
 | Public repository | https://github.com/laibasan/assignment-2 |
 | Exactly two members; meaningful commits by both | Actual member identities/contributions still required |
 | Repo/blog/post links submitted to instructor | Your submission portal action still required |
-| Optional live website | Pages workflow supplied; GitHub Pages settings must be enabled |
+| Live website | https://laibasan.github.io/assignment-2/ — deployed and verified |
 
 Do not fabricate publication URLs, commit authors, teamwork, or unaided authorship. The original manual prohibits direct AI-generated submission. Use this material to understand and independently revise the experiment before the viva.
