@@ -1,0 +1,16 @@
+{
+  "url": "https://laibasan.github.io/assignment-2/",
+  "deployed_commit": "4343570c9aeab8630b7173a9dbfb6647bd282094",
+  "workflow_run_id": 38157697958,
+  "attempt": 2,
+  "deployment": "success",
+  "verified_at": "2026-10-11T17:20:41Z",
+  "checks": {
+    "fault_example": "both models detected fault",
+    "normal_example": "both models detected no fault",
+    "manual_measurements": "both models detected fault",
+    "clear": "all six fields emptied; predictions reset; focus returned to phase A current",
+    "website_console_errors": []
+  },
+  "screenshot": "results/figures/live_deployment.jpg"
+}
